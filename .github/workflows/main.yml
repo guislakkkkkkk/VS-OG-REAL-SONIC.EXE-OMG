@@ -56,6 +56,19 @@ jobs:
           haxelib --quiet install flixel-addons
           haxelib --quiet install hxCodec
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
+          haxelib setup ~/haxelib
+          haxelib install hxcpp > /dev/null
+          haxelib install lime 7.9.0
+          haxelib install hxCodec
+          haxelib install openfl 9.1.0
+          haxelib --never install flixel 4.11.0
+          haxelib run lime setup flixel
+          haxelib install flixel-tools
+          haxelib install flixel-ui
+          haxelib install hscript
+          haxelib install flixel-addons
+          
+          haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
           haxelib list
 
       - name: Create Version Tag
